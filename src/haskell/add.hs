@@ -10,3 +10,6 @@ applyTwice f x = f (f x)
 --to invoke uncurryAdd (2,3)
 uncurryAdd :: (Int, Int) -> Int
 uncurryAdd = uncurry add
+
+uncurryInc :: Int -> Int
+uncurryInc x = uncurryAdd (1,x)
