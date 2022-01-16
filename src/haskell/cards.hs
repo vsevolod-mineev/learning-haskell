@@ -27,14 +27,12 @@ data Card = Card
   , color :: Color
   , value :: Value
   }
-  deriving Show
 
 queenDiamonds :: Card
 queenDiamonds = Card Diamonds Red Queen
 
 {- queenDiamonds :: Card
 queenDiamonds = Card { suit = Diamonds, color = Red, value = Queen } -}
-
 
 
 diamond :: Value -> Card
