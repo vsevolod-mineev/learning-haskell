@@ -1,18 +1,4 @@
-add :: (Num a) => a -> a -> a
-add x y = x + y
-
-inc :: Integer -> Integer
-inc = add 1
-
-applyTwice :: (a -> a) -> a -> a
-applyTwice f x = f (f x)
-
---to invoke uncurryAdd (2,3)
-uncurryAdd :: (Int, Int) -> Int
-uncurryAdd = uncurry add
-
-uncurryInc :: Int -> Int
-uncurryInc x = uncurryAdd (1,x)
+module Cards (Card, diamond, spade, heart, club) where
 
 --point datatype
 data Point = Point Int Int
@@ -41,9 +27,24 @@ data Card = Card
   , color :: Color
   , value :: Value
   }
+  deriving Show
 
 queenDiamonds :: Card
 queenDiamonds = Card Diamonds Red Queen
 
 {- queenDiamonds :: Card
 queenDiamonds = Card { suit = Diamonds, color = Red, value = Queen } -}
+
+
+
+diamond :: Value -> Card
+diamond = Card Diamonds Red
+
+spade :: Value -> Card
+spade = Card Spades Black
+
+heart :: Value -> Card
+heart = Card Hearts Red
+
+club :: Value -> Card
+club = Card Clubs Black
