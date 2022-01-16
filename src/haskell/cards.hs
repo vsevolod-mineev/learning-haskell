@@ -44,8 +44,8 @@ heart = Card Hearts Red
 club :: Value -> Card
 club = Card Clubs Black
 
-value :: Value -> Integer
-value card = case card of
+numericValue :: Value -> Integer
+numericValue card = case card of
   Two    -> 2
   Three  -> 3
   Four   -> 4
@@ -73,4 +73,7 @@ suitBeats _        _         = False
 
 beats :: Card -> Card -> Bool
 beats (Card suit1 color1 value1) (Card suit2 color2 value2) = 
-  (suitBeats suit1 suit2) && (value1 > value2)
+  (suitBeats suit1 suit2) && (numericValue value1 > numericValue value2)
+
+{- let sixSpades = Card {suit = Spades , color = Black, value = Six} -}
+{- let sevenDiamonds = Card {suit = Diamonds , color = Red, value = Seven} -}
