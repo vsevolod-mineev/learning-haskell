@@ -13,3 +13,12 @@ myList2 = [True, True, False]
 
 powersOfTwo = iterate (2*) 1
 --take 15 powersOfTwo
+
+--equivalent in Python looks like:
+{- def powersOfTwo(n):
+    square_list = [1]
+    for i in range(1,n+1):
+        square_list.append(2 ** i)
+    return square_list
+
+print(powersOfTwo(15)) -}
