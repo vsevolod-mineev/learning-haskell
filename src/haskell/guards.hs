@@ -1,3 +1,4 @@
-fac n 
- | n <= 1 =
- | otherwise = n * fac (n-1)
+absolute :: Int -> Int
+absolute n 
+  | n < 0     = (-n)
+  | otherwise = n

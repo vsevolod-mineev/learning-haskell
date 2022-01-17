@@ -75,5 +75,5 @@ beats :: Card -> Card -> Bool
 beats (Card suit1 color1 value1) (Card suit2 color2 value2) = 
   (suitBeats suit1 suit2) && (numericValue value1 > numericValue value2)
 
-{- let sixSpades = Card {suit = Spades , color = Black, value = Six} -}
-{- let sevenDiamonds = Card {suit = Diamonds , color = Red, value = Seven} -}
+sixSpades = Card {suit = Spades , color = Black, value = Six}
+sevenDiamonds = Card {suit = Diamonds , color = Red, value = Seven}
