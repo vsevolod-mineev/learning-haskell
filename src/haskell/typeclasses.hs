@@ -1,4 +1,4 @@
-import Prelude hiding (Ord, compare, (<), (<=), (>=), (>), max, min, LT, GT, EQ)
+import Prelude hiding (compare, (<), (<=), (>=), (>), max, min, LT, GT, EQ)
 class Equal a where
   equal :: a -> a -> Bool
 
@@ -29,3 +29,9 @@ instance (Equal a) => Equal [a] where
 
 instance (Equal a, Equal b) => Equal (a,b) where
   equal (x0, x1) (y0, y1) = equal x0 y0 && equal x1 y1
+
+--instances that can be derived automatically
+data List a
+  = Cons a (List a)
+  | Nil
+  deriving (Eq, Ord, Show)
