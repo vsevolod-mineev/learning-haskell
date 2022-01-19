@@ -1,3 +1,4 @@
+{-# LANGUAGE FlexibleInstances #-}
 import Prelude hiding (compare, (<), (<=), (>=), (>), max, min, LT, GT, EQ)
 class Equal a where
   equal :: a -> a -> Bool
