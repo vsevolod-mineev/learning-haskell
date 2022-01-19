@@ -22,3 +22,5 @@ cabal.project.local~
 .ghc.environment.*
 
 .vscode/
+
+learning-haskell.ghci
