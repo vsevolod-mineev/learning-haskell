@@ -12,3 +12,7 @@ absoluteJust n = case n of
     | n < 0     -> Just (-n)
     | otherwise -> Just n
      -}
+
+factorial n
+  | n <= 1 = 1
+  | otherwise = n * factorial (n-1)
