@@ -13,4 +13,3 @@ uncurryAdd = uncurry add
 
 uncurryInc :: Int -> Int
 uncurryInc x = uncurryAdd (1,x)
-
