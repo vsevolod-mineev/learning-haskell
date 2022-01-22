@@ -35,5 +35,11 @@ inRange min max x =
         iub = max >= x
  -}
 
+--map + anon function
+add3 = (\(x,y,z) -> (x+y+z))
+test = map add3 [(1,2,3),(2,1,0),(3,10,100)]
+
+--filter + anon
+test2 = filter (\x -> x>2) [1,2,3,4,5]
 
 
