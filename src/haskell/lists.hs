@@ -51,3 +51,18 @@ False
 compr = [2*x | x <- [1,2,3]]
 compr2 = [2*x | x <- [1,2,3], x > 1]
 compr3 = [(x,y) | x <- [1,2,3], y <- ['a','b']]
+
+--List Patterns
+
+sum :: [Int] -> Int
+sum [] = 0
+sum xs = foldr (+) 0 xs
+
+evens :: [Int] -> [Int]
+evens [] = []
+evens (x:xs)
+ | even x = x :evens xs
+ | otherwise = evens xs
+
+
+
