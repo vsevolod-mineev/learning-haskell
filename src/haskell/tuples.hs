@@ -14,3 +14,8 @@ tuple3 = (10, 20, 30)
 
 addTuples :: [(Int,Int)] -> [Int]
 addTuples xs = [ x+y | (x,y) <- xs]
+{- 
+λ> addTuples [(1,2),(2,3),(100,1)]
+[3,5,101]
+ -}
+
