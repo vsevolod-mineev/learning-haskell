@@ -19,3 +19,8 @@ addAnon :: Int -> Int -> Int
 --addAnon x y = x +y
 --addAnon x = (\y -> x + y)
 addAnon = (\x -> (\y -> x+y))
+{- 
+λ> addAnon 3
+<interactive>:3:1-9: error:
+    • No instance for (Show (Int -> Int)) arising from a use of ‘print’
+     -}
