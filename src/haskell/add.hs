@@ -13,3 +13,9 @@ uncurryAdd = uncurry add
 
 uncurryInc :: Int -> Int
 uncurryInc x = uncurryAdd (1,x)
+
+--these are equivalent
+addAnon :: Int -> Int -> Int
+--addAnon x y = x +y
+--addAnon x = (\y -> x + y)
+addAnon = (\x -> (\y -> x+y))

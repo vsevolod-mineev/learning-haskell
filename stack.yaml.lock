@@ -11,6 +11,13 @@ packages:
       sha256: 00cfcd768c02740343ecf67de4542f30a4ebbbd7200849a22271b35965837fef
   original:
     hackage: vector-0.12.3.1
+- completed:
+    hackage: lens-5.1@sha256:2cd46b613b9fb37e6eb64c518fd41cfdf55b15bd217d8780163b5c75974920bf,15013
+    pantry-tree:
+      size: 8214
+      sha256: a01b10a8b32e7aeb1e4fbb922761a3f9a8f28bb9d2270277b849984409aca067
+  original:
+    hackage: lens-5.1@sha256:2cd46b613b9fb37e6eb64c518fd41cfdf55b15bd217d8780163b5c75974920bf,15013
 snapshots:
 - completed:
     size: 586110
