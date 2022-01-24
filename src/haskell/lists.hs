@@ -2,6 +2,11 @@ import Data.List
 [1,2,3] = 1 : 2 : 3 : []      
 [1,2,3] = 1 : (2 : (3 : [])) -- with explicit parens
 
+{- 
+λ ['a','b','c'] == "abc"
+True:: Bool
+ -}
+ 
 myList1 :: [Int]
 myList1 = [1,2,3]
 
