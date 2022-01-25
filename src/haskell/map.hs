@@ -5,6 +5,11 @@ map2D :: (a -> b) -> [[a]] -> [[b]]
 map2D = map . map
 
 {- 
+λ> map toUpper "Chris"
+"CHRIS"
+ -}
+
+{- 
 λ> map (+1) [1..5]
 [2,3,4,5,6] :: (Enum b, Num b) => [b]
  -}

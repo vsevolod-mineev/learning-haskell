@@ -6,3 +6,6 @@ and1 = foldr (&&) True [True,True]
 
 or1 :: Bool
 or1 = foldr (||) False [True,True]
+
+rev :: [a] -> [a]
+rev = foldl (\x y -> y : x) []
