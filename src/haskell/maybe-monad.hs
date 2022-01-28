@@ -8,7 +8,6 @@ myTail :: [a] -> Maybe [a]
 myTail [] = Nothing
 myTail (x:xs) = Just xs
 
-
 bar3 :: [a] -> Maybe a
 bar3 xs = do
 a <- myTail xs
