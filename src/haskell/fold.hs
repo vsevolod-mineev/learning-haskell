@@ -8,4 +8,10 @@ or1 :: Bool
 or1 = foldr (||) False [True,True]
 
 rev :: [a] -> [a]
-rev = foldl (\x y -> y : x) []
+rev = foldl (\x y -> y : x) [] [1,2,3]
+
+{- 
+λ> foldl (\x y -> 2*x + y) 4 [1,2,3]
+43
+-}
+

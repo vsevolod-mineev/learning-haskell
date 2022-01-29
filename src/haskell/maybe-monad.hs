@@ -13,5 +13,5 @@ bar3 xs = do
 a <- myTail xs
 b <- myTail a
 myHead b
+return
 
-hello a b = if b == 0 then Nothing else Just $ div a b

@@ -3,12 +3,12 @@ import Prelude hiding (compare, (<), (<=), (>=), (>), max, min, LT, GT, EQ)
 class Equal a where
   equal :: a -> a -> Bool
 
-{- instance Equal Bool where
+instance Equal Bool where
   equal True True   = True
   equal False False = True
   equal True False  = False
   equal False True  = False
-   -}
+  
 {- 
 λ> equal True False
 False
