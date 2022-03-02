@@ -38,6 +38,9 @@ executable learning-haskell
         scalpel ^>= 0.6.2,
         http-conduit ^>= 2.3.8,
         bytestring ^>= 0.10.12.0,
+        tagsoup ^>= 0.14.8,
+        HTTP ^>= 4000.3.16,
+
 
     hs-source-dirs:   app
     default-language: Haskell2010

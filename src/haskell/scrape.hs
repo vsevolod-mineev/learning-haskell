@@ -11,15 +11,15 @@ openURL = simpleHttp url >>= L.putStr
 
 type Name = String
 
-newtype Anime
-    = Anime Name
+data Anime
+    = Anime Name String
     deriving (Show, Eq)
 
 allAnime :: IO (Maybe [Anime])
 allAnime = scrapeURL "https://myanimelist.net/topanime.php?type=airing" animeNames
    where
        animeNames :: Scraper String [Anime]
-       animeNames = chroots ("h3" @: [hasClass "anime_ranking_h"]) name
+       animeNames = chroots ("h3" @: [hasClass "anime_ranking_h3"]) name
 
        name :: Scraper String Anime
        name = textName
@@ -27,4 +27,4 @@ allAnime = scrapeURL "https://myanimelist.net/topanime.php?type=airing" animeNam
        textName :: Scraper String Anime
        textName = do
            name      <- text $ "a" @: [hasClass "name"]
-           return $ Anime name
+           return $ Anime name "Hello"
